@@ -110,6 +110,7 @@ module Prawn
         end
       else
         @document.bounding_box b.top_left, :width => b.width, :height => b.height do
+          stroke_bounds
           yield @document, record
         end
       end
